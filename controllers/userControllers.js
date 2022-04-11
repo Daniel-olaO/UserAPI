@@ -13,6 +13,8 @@ const dbConfig = require('../models/config.js');
  * @returns {Object} - Response object
  */
 
+
+//middleware for profile image upload
 const storage = new GridFsStorage({
     url: dbConfig.url + dbConfig.database,
     file: (req, file) => {
@@ -23,6 +25,7 @@ const storage = new GridFsStorage({
         }
     }
 });
+//mddleware for JWT
 var ExtractJwt = passportJWT.ExtractJwt;
 var JwtStrategy = passportJWT.Strategy;
 

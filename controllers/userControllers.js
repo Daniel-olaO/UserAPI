@@ -87,7 +87,7 @@ module.exports = {
                 });
             }
         } catch (error) {
-            next(error);
+            res.status(404).send(error);
         }
     },
     updateUserProfile: async(req, res, next) => {
